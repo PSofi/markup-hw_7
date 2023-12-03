@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        fieldset{
+            width: 450px;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+        textarea{
+            box-sizing: border-box;
+           width: 400px;
+           height: 150px;
+           resize: none; 
+        }
+#highload1 {
+    opacity: 0;
+}
+#highload1 + label::before {
+  content: '\2713';  
+  text-align: center;
+  color: white;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  border: 1px inset #000;
+  border-radius: 0.25em;
+  margin: 0.25em;
+  display: inline-block;
+}
+#highload1:checked + label::before {
+  background-color: green;
+}
+#highload2 {
+    opacity: 0;
+}
+#highload2 + label::before {
+  content: '\2713';  
+  text-align: center;
+  color: white;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  border: 1px inset #000;
+  border-radius: 0.25em;
+  margin: 0.25em;
+  display: inline-block;
+}
+#highload2:checked + label::before {
+    background-color: green;
+}
+#load3 {
+    opacity: 0;
+}
+#load3 + label::before {
+  content: '\2713';  
+  text-align: center;
+  color: white;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  border: 1px inset #000;
+  border-radius: 0.25em;
+  margin: 0.25em;
+  display: inline-block;
+}
+#load3:checked + label::before {
+    background-color: green;
+}
+    </style>
+</head>
+<body>
+    <form action="https://www.waivio.com/" method="post">
+        <fieldset>
+            <legend>Контактна інформація</legend>
+            <label for="name">Ім’я <em>*</em></label><input type="text" id="name"><br>
+            <label for="email">E-mail</label><input type="email" id="email"><br>
+            <label for="tel">Телефон</label><input type="tel" id="tel"><br>
+            <label>Які країни ви хочете відвідати?</label>
+            <select>
+                <option>Польща</option>
+                <option>Німеччина</option>
+                <option>Чехія</option>
+                <option>Італія</option>
+                <option>Іспанія</option>
+                <option>Португалія</option>
+                <option>Канада</option>
+                <option>Мексика</option>
+                <option>Бразилія</option>
+                <option>Данія</option>
+            </select>
+            <textarea></textarea><br>
+            <input id="highload1" name="highload1" type="checkbox">
+            <label for="highload1">Один</label><br>
+            <input id="highload2" name="highload2" type="checkbox">
+            <label for="highload2">Два</label><br>
+            <input id="load3" name="load3" type="checkbox">
+            <label for="load3">Три</label><br>
+        </fieldset>
+        <button type="submit">Відправити</button>
+    </form>      
+</body>
+</html>
